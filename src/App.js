@@ -7,7 +7,7 @@ const App = () => {
     fetch("https://xcountries-backend.azurewebsites.net/all")
       .then((res) => res.json())
       .then((data) => setCountries(data))
-      .catch((err) => console.error(err));
+      .catch((err) => console.error("Error fetching data:" + err));
   }, []);
   console.log(countries);
   return (
